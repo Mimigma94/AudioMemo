@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		155A3A6A2125CF3000C81A5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155A3A692125CF3000C81A5A /* AppDelegate.swift */; };
-		155A3A6C2125CF3000C81A5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155A3A6B2125CF3000C81A5A /* ViewController.swift */; };
+		155A3A6C2125CF3000C81A5A /* AudioTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155A3A6B2125CF3000C81A5A /* AudioTableViewController.swift */; };
 		155A3A6F2125CF3000C81A5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 155A3A6D2125CF3000C81A5A /* Main.storyboard */; };
 		155A3A712125CF3100C81A5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 155A3A702125CF3100C81A5A /* Assets.xcassets */; };
 		155A3A742125CF3100C81A5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 155A3A722125CF3100C81A5A /* LaunchScreen.storyboard */; };
+		155A3A7C2125D1E500C81A5A /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155A3A7B2125D1E500C81A5A /* RecordViewController.swift */; };
+		155A3A82212B1D3F00C81A5A /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155A3A81212B1D3F00C81A5A /* Utility.swift */; };
+		155A3A84212B316E00C81A5A /* SaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155A3A83212B316E00C81A5A /* SaveViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		155A3A662125CF3000C81A5A /* AudioMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		155A3A692125CF3000C81A5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		155A3A6B2125CF3000C81A5A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		155A3A6B2125CF3000C81A5A /* AudioTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTableViewController.swift; sourceTree = "<group>"; };
 		155A3A6E2125CF3000C81A5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		155A3A702125CF3100C81A5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		155A3A732125CF3100C81A5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		155A3A752125CF3100C81A5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		155A3A7B2125D1E500C81A5A /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
+		155A3A81212B1D3F00C81A5A /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		155A3A83212B316E00C81A5A /* SaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,49 @@
 		155A3A682125CF3000C81A5A /* AudioMemo */ = {
 			isa = PBXGroup;
 			children = (
-				155A3A692125CF3000C81A5A /* AppDelegate.swift */,
-				155A3A6B2125CF3000C81A5A /* ViewController.swift */,
-				155A3A6D2125CF3000C81A5A /* Main.storyboard */,
-				155A3A702125CF3100C81A5A /* Assets.xcassets */,
-				155A3A722125CF3100C81A5A /* LaunchScreen.storyboard */,
+				155A3A80212ADFE000C81A5A /* Custom Classes */,
+				155A3A7F2125D2C900C81A5A /* Assets */,
+				155A3A7E2125D2B300C81A5A /* Template */,
+				155A3A7D2125D2A000C81A5A /* ViewController */,
 				155A3A752125CF3100C81A5A /* Info.plist */,
 			);
 			path = AudioMemo;
+			sourceTree = "<group>";
+		};
+		155A3A7D2125D2A000C81A5A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				155A3A6B2125CF3000C81A5A /* AudioTableViewController.swift */,
+				155A3A7B2125D1E500C81A5A /* RecordViewController.swift */,
+				155A3A83212B316E00C81A5A /* SaveViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		155A3A7E2125D2B300C81A5A /* Template */ = {
+			isa = PBXGroup;
+			children = (
+				155A3A692125CF3000C81A5A /* AppDelegate.swift */,
+			);
+			path = Template;
+			sourceTree = "<group>";
+		};
+		155A3A7F2125D2C900C81A5A /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				155A3A6D2125CF3000C81A5A /* Main.storyboard */,
+				155A3A722125CF3100C81A5A /* LaunchScreen.storyboard */,
+				155A3A702125CF3100C81A5A /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		155A3A80212ADFE000C81A5A /* Custom Classes */ = {
+			isa = PBXGroup;
+			children = (
+				155A3A81212B1D3F00C81A5A /* Utility.swift */,
+			);
+			path = "Custom Classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +176,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				155A3A6C2125CF3000C81A5A /* ViewController.swift in Sources */,
+				155A3A82212B1D3F00C81A5A /* Utility.swift in Sources */,
+				155A3A84212B316E00C81A5A /* SaveViewController.swift in Sources */,
+				155A3A7C2125D1E500C81A5A /* RecordViewController.swift in Sources */,
+				155A3A6C2125CF3000C81A5A /* AudioTableViewController.swift in Sources */,
 				155A3A6A2125CF3000C81A5A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
