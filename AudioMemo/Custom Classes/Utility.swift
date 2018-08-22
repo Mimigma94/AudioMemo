@@ -9,12 +9,25 @@
 import Foundation
 import AVFoundation
 
-// HAllo
 class Utility {
     
     private static func getDocumentDirectory() -> URL? {
         return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
     }
+    
+    static func moveAudioFile(to category: String, with name: String) -> Bool {
+        do {
+            guard let documentDirectory = getDocumentDirectory() else { return false }
+            let categoryPath = documentDirectory.appendingPathComponent(category)
+            let originPath = documentDirectory.appendingPathComponent("mysound.caf")
+            let destinationPath = categoryPath.appendingPathComponent(name)
+            try FileManager.default.moveItem(at: originPath, to: destinationPath)
+            return true
+        } catch {
+            return false
+        }
+    }
+    
     
     static func getAudioRecorder() -> AVAudioRecorder? {
         var audioRecorder: AVAudioRecorder?

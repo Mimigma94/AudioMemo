@@ -31,6 +31,7 @@ class SaveViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameTextField.delegate = self
     }
     
     //--------------------------------------------------
@@ -42,9 +43,9 @@ class SaveViewController: UIViewController {
             switch title {
             case "Important","Today":
                 updateCategory(for: title)
-            case "Save":
-                break
-            case "Back":
+            case "SAVE":
+                saveNewFile()
+            case "BACK":
                 dismiss(animated: true, completion: nil)
             default:
                 break
@@ -66,4 +67,16 @@ class SaveViewController: UIViewController {
             }
         }
     }
+    
+    func saveNewFile() {
+    }
+}
+
+extension SaveViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
 }
