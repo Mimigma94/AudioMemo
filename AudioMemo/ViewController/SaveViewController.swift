@@ -69,6 +69,33 @@ class SaveViewController: UIViewController {
     }
     
     func saveNewFile() {
+        if let name = nameTextField.text {
+            // wenn da etwas steht und der name somit NICHT leer ist...mache das ->
+            guard !name.isEmpty else {
+                showAlert(reason: 0)
+                return
+            }
+            
+            let filename = name + ".caf"
+            guard Utility.moveAudioFile(to: category, with: filename) else {
+                showAlert(reason: 1)
+                return
+            }
+            
+            dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    func showAlert(reason: Int) {
+        let message = reason == 0 ? "Please enter a name first!" : "The file could not be saved. Did you maybe choose a dublicate name?"
+        // 1. UIAlertController erzeugen
+        let alertViewController = UIAlertController(title: "Could not save file", message: message, preferredStyle: .alert)
+        // 2. UIAlertAction erzeugen
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        // 3. Action zum AlertController hinzufügen
+        alertViewController.addAction(okAction)
+        // 4. mit present AlertController anzeigen
+        present(alertViewController, animated: true, completion: nil)
     }
 }
 
